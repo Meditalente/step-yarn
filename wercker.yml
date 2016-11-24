@@ -1,0 +1,7 @@
+box: wercker/default
+build:
+  steps:
+    - validate-wercker-step
+    - script:
+        name: prepare output
+        code: rm -rf $WERCKER_ROOT/.git

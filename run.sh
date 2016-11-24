@@ -22,4 +22,6 @@ fi
 YARN="$YARN $WERCKER_YARN_OPTIONS"
 
 echo "$YARN"
-eval $YARN
+eval "$YARN"
+
+export PATH="$PATH:`yarn global bin`"
