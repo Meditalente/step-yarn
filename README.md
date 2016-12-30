@@ -8,6 +8,7 @@ If yarn is not installed before the step is ran yarn will be installed for you.
 
 - `production` (optional, default `false`) If true passes `--prod` flag to yarn and does not install `devDependencies` or removes `devDependencies` after build
 - `cache` (optional, default `true`) If true uses `$WERCKER_CACHE_DIR` to persist cache from previous runs of the pipeline and for future runs of the pipeline
+- `version` (optional) Installs a specific version, defaults to `0.18.1`
 - `options` (optional) Additional options to pass through to yarn, such as `--flat`
 
 ## Example
@@ -17,7 +18,7 @@ build:
   steps:
     - yarn:
       name: install dependencies
-      
+
     - script:
       name: build
       script: npm build   # Build here requires devDependencies
@@ -33,7 +34,14 @@ The MIT License (MIT)
 
 ## Changelog
 
+1.2.0
+
+- Added version option
+
+1.1.0
+
+- Export yard bin path
+
 1.0.0
 
 - Initial release
-

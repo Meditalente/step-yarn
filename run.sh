@@ -4,7 +4,7 @@ YARN=yarn
 
 if ! hash yarn 2>/dev/null; then
   echo "Installing yarn..."
-  npm install -g --loglevel warn yarn@0.17.8
+  npm install -g --loglevel warn yarn@$WERCKER_YARN_VERSION
 fi
 
 if [ "$WERCKER_YARN_CACHE" == "true" ]; then
