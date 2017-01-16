@@ -8,7 +8,6 @@ If yarn is not installed before the step is ran yarn will be installed for you.
 
 - `production` (optional, default `false`) If true passes `--prod` flag to yarn and does not install `devDependencies` or removes `devDependencies` after build
 - `cache` (optional, default `true`) If true uses `$WERCKER_CACHE_DIR` to persist cache from previous runs of the pipeline and for future runs of the pipeline
-- `version` (optional) Installs a specific version, defaults to `0.18.1`
 - `options` (optional) Additional options to pass through to yarn, such as `--flat`
 
 ## Example
@@ -33,6 +32,11 @@ build:
 The MIT License (MIT)
 
 ## Changelog
+
+2.0.0
+
+- Switched to official installation guide https://yarnpkg.com/en/docs/install#linux-tab
+- Removed version option
 
 1.2.0
 
