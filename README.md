@@ -33,6 +33,10 @@ The MIT License (MIT)
 
 ## Changelog
 
+2.0.1
+
+- Small fix within installation process
+
 2.0.0
 
 - Switched to official installation guide https://yarnpkg.com/en/docs/install#linux-tab
