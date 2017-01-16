@@ -1,13 +1,9 @@
 #!/bin/bash
 
-YARN=yarn
+YARN="$HOME/.yarn/bin/yarn"
 
-if ! hash yarn 2>/dev/null; then
-  echo "Installing yarn..."
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  sudo apt-get update && sudo apt-get install yarn
-fi
+echo "Installing yarn..."
+curl -o- -L https://yarnpkg.com/install.sh | bash
 
 if [ "$WERCKER_YARN_CACHE" == "true" ]; then
   YARN="HOME=$WERCKER_CACHE_DIR $YARN"
@@ -25,5 +21,3 @@ YARN="$YARN $WERCKER_YARN_OPTIONS"
 
 echo "$YARN"
 eval "$YARN"
-
-export PATH="$PATH:`yarn global bin`"

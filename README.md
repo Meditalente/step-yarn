@@ -33,6 +33,10 @@ The MIT License (MIT)
 
 ## Changelog
 
+2.0.2
+
+- Small fix within installation process
+
 2.0.1
 
 - Small fix within installation process
