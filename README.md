@@ -33,6 +33,10 @@ The MIT License (MIT)
 
 ## Changelog
 
+2.0.3
+
+- Check if yarn already installed
+
 2.0.2
 
 - Small fix within installation process

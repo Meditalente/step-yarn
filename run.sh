@@ -2,8 +2,10 @@
 
 YARN="$HOME/.yarn/bin/yarn"
 
-echo "Installing yarn..."
-curl -o- -L https://yarnpkg.com/install.sh | bash
+if ! hash yarn 2>/dev/null; then
+  echo "Installing yarn..."
+  curl -o- -L https://yarnpkg.com/install.sh | bash
+fi
 
 if [ "$WERCKER_YARN_CACHE" == "true" ]; then
   YARN="HOME=$WERCKER_CACHE_DIR $YARN"
