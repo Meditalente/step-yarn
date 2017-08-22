@@ -33,6 +33,10 @@ The MIT License (MIT)
 
 ## Changelog
 
+2.0.4
+
+- Use gloabl yarn if available
+
 2.0.3
 
 - Check if yarn already installed

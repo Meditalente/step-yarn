@@ -1,8 +1,11 @@
 #!/bin/bash
 
 YARN="$HOME/.yarn/bin/yarn"
+if hash yarn 2>/dev/null; then
+  YARN=$(which yarn)
+fi
 
-if ! hash yarn 2>/dev/null; then
+if ! [ -x $YARN]; then
   echo "Installing yarn..."
   curl -o- -L https://yarnpkg.com/install.sh | bash
 fi
