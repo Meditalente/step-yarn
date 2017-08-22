@@ -5,7 +5,7 @@ if hash yarn 2>/dev/null; then
   YARN=$(which yarn)
 fi
 
-if ! [ -x $YARN]; then
+if ! [ -x $YARN ]; then
   echo "Installing yarn..."
   curl -o- -L https://yarnpkg.com/install.sh | bash
 fi
