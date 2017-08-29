@@ -5,13 +5,13 @@ if hash yarn 2>/dev/null; then
   YARN=$(which yarn)
 fi
 
-if ! [ -x $YARN ]; then
+if ! [ -x "$YARN" ]; then
   echo "Installing yarn..."
   curl -o- -L https://yarnpkg.com/install.sh | bash
 fi
 
 if [ "$WERCKER_YARN_CACHE" == "true" ]; then
-  YARN="HOME=$WERCKER_CACHE_DIR $YARN"
+  YARN="HOME=$WERCKER_CACHE_DIR/yarn $YARN"
 fi
 
 if [ "$WERCKER_YARN_PRODUCTION" == "true" ]; then

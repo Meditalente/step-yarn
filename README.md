@@ -33,6 +33,10 @@ The MIT License (MIT)
 
 ## Changelog
 
+2.0.5
+
+- Set HOME to `$WERCKER_CACHE_DIR/yarn`
+
 2.0.4
 
 - Use gloabl yarn if available
